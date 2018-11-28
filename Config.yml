@@ -6,5 +6,10 @@
     - name: Configure httpd.conf
       file: src=/tmp/httpd.conf dest=/etc/httpd/conf/
       file: src=/tmp/index.html dest=/var/www/html
+      notify: restart service
+      
+   handlers:
+      -name: restart service
+       service: name=httpd state=restarted
       
   ...
