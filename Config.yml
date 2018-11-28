@@ -1,0 +1,10 @@
+---
+- name: Configure httpd.conf
+  Hosts: Webserver
+  
+  tasks:
+    - name: Configure httpd.conf
+      file: src=/tmp/httpd.conf dest=/etc/httpd/conf/
+      file: src=/tmp/index.html dest=/var/www/html
+      
+  ...
