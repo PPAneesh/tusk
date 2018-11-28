@@ -5,8 +5,10 @@
   tasks:
     - name: Install HTTP server
       yum: name=http state=present 
+      notify: restart http
       
-    - name: Start service
+   handlers:   
+    - name: restart http
       service: name=httpd state=started enabled=true
       
       
