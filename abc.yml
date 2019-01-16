@@ -1,0 +1,9 @@
+---
+- hosts: client.example.com
+
+  tasks:
+   - name: Install elinks to the machine
+     yum: name=elinks state=present
+
+...
+
