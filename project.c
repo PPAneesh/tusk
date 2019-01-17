@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-vaoid main()
+void main()
 {
 	printf("Hi this is my first C project");
 }
